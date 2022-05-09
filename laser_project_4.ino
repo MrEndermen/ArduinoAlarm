@@ -34,16 +34,16 @@ void loop() {
   digitalWrite(Laser, HIGH); // Initialize the Laser's Power
   if (light < 400) // Wait for the console to read below 400
   {
-    digitalWrite(LED, HIGH); // if the console to read below 400 turn the LED on
-    delay(1000); // wait 1 seconds to wait for beam to establish
-// There is an issue in this area. The console stops pushing data when it drops below 400. 
-// I need it to continue or the alarm goes off because no new numbers have shown up in the console that it's reading from. it just stopped and the previous readout is still the current readout. 
-    if (light < 400) // if the console does not say above 400 turn on the alarm.
+    digitalWrite(LED, HIGH); // if the console reads below 400 turn the LED on
+    delay(3000); // wait 3 seconds to wait for beam to establish
+    light = analogRead(A0); // Label the port A0 as sensor
+    Serial.println(light); // Print sensor's (A0) through serial port to control panel
+    if (light < 400) // if the console STILL does not say above 400 turn on the alarm.
     {
       alarm(); // sound the alarm
     }
-    delay(3000); //Time after  alarm ends - wait 3 seconds
     digitalWrite(LED, LOW); // turn the LED off
+    return;
   }
   else
     digitalWrite(LED, LOW);
