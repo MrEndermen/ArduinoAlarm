@@ -1,6 +1,6 @@
 # ArduinoLaser Sensor
 
-This project is for detecting a laser's beam on a photoresistor. 
+This is my first project. Please Enjoy. It is for detecting a laser's beam on a photoresistor. 
 When the beam is removed it waits for 3 seconds and if the beam is still removed from the sensor it will make alarm sonnd.
 
 Because the code runs over and over, if the beam is still blocked on the next pass around it will sound the alarm again.
