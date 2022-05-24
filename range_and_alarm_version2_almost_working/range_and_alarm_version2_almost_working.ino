@@ -17,7 +17,7 @@ void setup()
   Serial.begin(115200); // initialize serial communication with the arduino at 9600 bits per second
   delay(20);               // Give port time to initalize
   printf_begin();          // Initialize printf.
-  printf("\r\nTFMPlus Library Example - 10SEP2021\r\n");  // say 'hello'
+  printf("\r\nLiDar Range Project - 5MAY2022 - By Daniel B\r\n");  // say 'hello'
   Serial2.begin( 115200);  // Initialize TFMPLus device serial port.
   delay(20);               // Give port time to initalize
   tfmP.begin( &Serial2);   // Initialize device library object and...
