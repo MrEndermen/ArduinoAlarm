@@ -56,10 +56,10 @@ void alarmTone() {
 }
 // The code to play the alarm and how often
 void alarm() {
-  delay(500); //Time before  alarm starts
+  delay(50); //Time before  alarm starts
   alarmTone();
   alarmTone();
-  delay(1000); //Time waiting after alarm starts
+  delay(1000); //Time waiting after alarm finishes
 }
 
 void loop() {
@@ -78,10 +78,20 @@ void loop() {
   if (tfDist < 100) // Wait for the console to read below 100cm
   {
     digitalWrite(LED, HIGH); // if the console reads below 100CM turn the LED on
-    delay(3000); // wait 3 seconds to wait for beam to establish
-    if (tfDist < 100) // Get data from the device. if the console STILL does not say above 100 cm turn on the alarm.
-    
+    delay(2000); // wait 3 seconds to wait for beam to establish
     {
+      // This is all to get data from the device working again before it makes an alarm noise
+      if ( tfmP.getData( tfDist, tfFlux, tfTemp)) // Get data from the device.
+        printf( "Dist:%04icm ", tfDist);   // display distance,
+      printf( "Flux:%05i ",   tfFlux);   // display signal strength/quality,
+      printf( "Temp:%2i%s",  tfTemp, "C");   // display temperature,
+      printf( "\r\n");                   // end-of-line.
+      delay(500);   // This is to wait for the readings to start working again
+    }
+    if (tfDist < 100) // Get data from the device. if the console STILL does not say above 100 cm turn on the alarm.
+    {
+      printf ( "There is something in the way of the beam!" );
+      printf( "\r\n");                   // end-of-line.
       alarm(); // sound the alarm
     }
     digitalWrite(LED, LOW); // turn the LED off
