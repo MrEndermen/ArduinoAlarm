@@ -3,10 +3,10 @@
  * Inception: 29JAN2019
  * Last work: 10SEP2021
 
- * Description: Arduino sketch to test the Benewake TFMini Plus
+ * Description: Arduino sketch to test the Benewake TF-Luna.
  * time-of-flight Lidar ranging sensor using the TFMPlus Library.
 
- * Default settings for the TFMini Plus are a 115200 serial baud rate
+ * Default settings for the TFLuna are a 115200 serial baud rate
  * and a 100Hz measurement frame rate. The device will begin returning
  * measurement data right away:
  *   Distance in centimeters,
