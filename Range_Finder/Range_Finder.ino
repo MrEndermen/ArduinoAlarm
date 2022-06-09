@@ -1,7 +1,7 @@
 /* File Name: TFMP_example.ino
- * Developer: Bud Ryerson
- * Inception: 29JAN2019
- * Last work: 10SEP2021
+ * Personal Application Developer: Daniel Barsby
+ * Inception: 01MAY2022
+ * Last work: 09JUN2022
 
  * Description: Arduino sketch to test the Benewake TF-Luna.
  * time-of-flight Lidar ranging sensor using the TFMPlus Library.
