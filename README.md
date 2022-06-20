@@ -33,20 +33,14 @@ Here is a video of the project at one point: https://youtube.com/shorts/csgArc6c
 PINOUT:
 
 TF-LUNA LIDAR:
-
 1 +5V Power supply
-
 2 RXD/SDA Receiving/Data
-
 3 TXD/SCL Transmitting/Clock
-
 4 GND Ground
-
 5 Configuration Input - (Not used with UART. GND when I2C is in use supposedly)
 Ground: I2C mode
 /3.3V: Serial port
 Communications mode
-
 6 Multiplexing output - (Not used for our purposes) 
 Default: on/off mode output
 I2C mode: Data availability
