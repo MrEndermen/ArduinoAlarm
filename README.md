@@ -31,6 +31,7 @@ Here is a video of the project at one point: https://youtube.com/shorts/csgArc6c
  
  
 PINOUT:
+
 TF-LUNA LIDAR:
 1 +5V Power supply
 2 RXD/SDA Receiving/Data
