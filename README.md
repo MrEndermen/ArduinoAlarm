@@ -1,18 +1,54 @@
+ABOUT: 
 This is my first program / arduino project. Please Enjoy. 
+This is where I will record my findings and progress. I am unsure if this is the best place to do this, but it seems to be the easiest so far. 
 
-Here is a video of the project in it's current state: https://youtube.com/shorts/csgArc6coVU?feature=share
-
-Arduino Alarm:  lidar sensor and alarm project. This is where I will record my findings and progress. I am unsure if this is the best place to do this, but it seems to be the easiest so far. 
-
-This project is for detecting something within range.
-When the lidar decetcs something within a meter it waits for 3 seconds and if the lidar is still detecthing something within 100cm it will make the alarm sonnd.
+Arduino Alarm:  lidar sensor and alarm project. 
 
 Because the code runs over and over, if the lidar is still blocked on the next pass around it will sound the alarm again.
 If the beam is no longer blocked the alarm is supposed to stop sounding.
 
-This currently plays a klaxon themed buzzer noise as an alarm. This will need to be adjusted to have an audio file play in the future.
 
-Additional goals for the next step of this project include:
-testing it with a laser and a solar panel, or something capable of detecing a beam pointed at it from 10 feet away. 
 
-Currently it's a very small photoresistor with an LED against it. When you cover the photoresistor, blocks the light from the LED.
+
+REQUIRED GOALS: 
+To determine if an object is blocking a path. If the path is blocked an alarm goes off.
+
+ADDITIONAL GOALS:
+- Test powering the project with a battery and solar panel
+- Install a speaker
+- Install a dedicated sound board to trigger an audio file to play instead of a buzzer noise: https://www.adafruit.com/product/2342
+
+
+
+
+STATUS:
+C̶u̶r̶r̶e̶n̶t̶l̶y̶ ̶a̶ ̶v̶e̶r̶y̶ ̶s̶m̶a̶l̶l̶ ̶p̶h̶o̶t̶o̶r̶e̶s̶i̶s̶t̶o̶r̶ ̶w̶i̶t̶h̶ ̶a̶n̶ ̶L̶E̶D̶ ̶a̶g̶a̶i̶n̶s̶t̶ ̶i̶t̶.̶ ̶W̶h̶e̶n̶ ̶y̶o̶u̶ ̶c̶o̶v̶e̶r̶ ̶t̶h̶e̶ ̶p̶h̶o̶t̶o̶r̶e̶s̶i̶s̶t̶o̶r̶,̶ ̶b̶l̶o̶c̶k̶s̶ ̶t̶h̶e̶ ̶l̶i̶g̶h̶t̶ ̶f̶r̶o̶m̶ ̶t̶h̶e̶ ̶L̶E̶D̶.
+Currently a Elegoo Mega2560 is being used.
+TF-Luna Lidar sensor is in use. When it measures an object under 200cm an accumulator will start and if you do not get out of the path of the beam it will sound an alarm after 3 seconds. If you get out of the path before 3 seconds, the accumulator will decrement back to zero. If something is closer than 10cm it will not sound. This is to prevent the alarm from sounding when nothing is detected in the path or if the sensor fails. The sensor reads 000cm at it's max distance is why.
+Here is a video of the project at one point: https://youtube.com/shorts/csgArc6coVU?feature=share 
+ 
+ 
+ 
+ 
+PINOUT:
+TF-LUNA LIDAR:
+1 +5V Power supply
+2 RXD/SDA Receiving/Data
+3 TXD/SCL Transmitting/Clock
+4 GND Ground
+5 Configuration Input - (Not used with UART. GND when I2C is in use supposedly)
+Ground: I2C mode
+/3.3V: Serial port
+Communications mode
+
+6 Multiplexing output - (Not used for our purposes) 
+Default: on/off mode output
+I2C mode: Data availability
+signal on but not switching 
+value mode
+
+Buzzer: Pin O7 IN. GND out
+
+ARDUINO ELEGOO PINOUT A2560 TO Lidar (UART):  RX PIN into TX1 18 / TX PIN into RX1 19
+ARDUINO ELEGOO PINOUT A2560 TO Lidar (i2C): (RX)SDA PIN into SDA20
+Speaker: Pin 07 IN. GND OUT
