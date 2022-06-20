@@ -36,6 +36,7 @@ TF-LUNA LIDAR:
 2 RXD/SDA Receiving/Data
 3 TXD/SCL Transmitting/Clock
 4 GND Ground
+
 5 Configuration Input - (Not used with UART. GND when I2C is in use supposedly)
 Ground: I2C mode
 /3.3V: Serial port
@@ -46,6 +47,7 @@ Default: on/off mode output
 I2C mode: Data availability
 signal on but not switching 
 value mode
+
 
 Buzzer: Pin O7 IN. GND out
 
