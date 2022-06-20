@@ -22,8 +22,9 @@ ADDITIONAL GOALS:
 
 
 STATUS:
-C̶u̶r̶r̶e̶n̶t̶l̶y̶ ̶a̶ ̶v̶e̶r̶y̶ ̶s̶m̶a̶l̶l̶ ̶p̶h̶o̶t̶o̶r̶e̶s̶i̶s̶t̶o̶r̶ ̶w̶i̶t̶h̶ ̶a̶n̶ ̶L̶E̶D̶ ̶a̶g̶a̶i̶n̶s̶t̶ ̶i̶t̶.̶ ̶W̶h̶e̶n̶ ̶y̶o̶u̶ ̶c̶o̶v̶e̶r̶ ̶t̶h̶e̶ ̶p̶h̶o̶t̶o̶r̶e̶s̶i̶s̶t̶o̶r̶,̶ ̶b̶l̶o̶c̶k̶s̶ ̶t̶h̶e̶ ̶l̶i̶g̶h̶t̶ ̶f̶r̶o̶m̶ ̶t̶h̶e̶ ̶L̶E̶D̶.
+C̶u̶r̶r̶e̶n̶t̶l̶y̶ ̶a̶ ̶v̶e̶r̶y̶ ̶s̶m̶a̶l̶l̶ ̶p̶h̶o̶t̶o̶r̶e̶s̶i̶s̶t̶o̶r̶ ̶w̶i̶t̶h̶ ̶a̶n̶ ̶L̶E̶D̶ ̶a̶g̶a̶i̶n̶s̶t̶ ̶i̶t̶.̶ ̶W̶h̶e̶n̶ ̶y̶o̶u̶ ̶c̶o̶v̶e̶r̶ ̶t̶h̶e̶ ̶p̶h̶o̶t̶o̶r̶e̶s̶i̶s̶t̶o̶r̶,̶ ̶b̶l̶o̶c̶k̶s̶ ̶t̶h̶e̶ ̶l̶i̶g̶h̶t̶ ̶f̶r̶o̶m̶ ̶t̶h̶e̶ ̶L̶E̶D̶
 Currently a Elegoo Mega2560 is being used.
+
 TF-Luna Lidar sensor is in use. When it measures an object under 200cm an accumulator will start and if you do not get out of the path of the beam it will sound an alarm after 3 seconds. If you get out of the path before 3 seconds, the accumulator will decrement back to zero. If something is closer than 10cm it will not sound. This is to prevent the alarm from sounding when nothing is detected in the path or if the sensor fails. The sensor reads 000cm at it's max distance is why.
 Here is a video of the project at one point: https://youtube.com/shorts/csgArc6coVU?feature=share 
  
