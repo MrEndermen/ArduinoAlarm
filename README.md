@@ -17,7 +17,7 @@ ADDITIONAL GOALS:
 - Test powering the project with a battery and solar panel
 - Install a speaker
 - Install a dedicated sound board to trigger an audio file to play instead of a buzzer noise: https://www.adafruit.com/product/2342
-
+- Develop a XOD node for TF-Luna so I can use a visual programming tool instead. My current Xodball is also uplaoded to this repository.
 
 
 
