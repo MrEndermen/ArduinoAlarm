@@ -54,4 +54,4 @@ ARDUINO ELEGOO PINOUT MEGAA2560 TO Lidar (using UART):  TX PIN into RX2 (Port 17
 
 ARDUINO ELEGOO PINOUT MEGAA2560 TO Lidar (using i2C): (RX)SDA PIN into SDA (Port 20 on Arudino) / TX(SCL) PIN into SCL (Port 21 on Arudino) / 𝐋𝐢𝐝𝐚𝐫 𝐏𝐢𝐧 𝟓 𝐢𝐧𝐭𝐨 𝐆𝐫𝐨𝐮𝐧𝐝 / Lidar pin 5v(red cable / Port 1 on Lidar) into 5v on Arudino
 
-Speaker: Pin 07 (positive on speaker) IN. GND (negitive on speaker) OUT
+Speaker: Pin 07 (positive on speaker) IN. GND (negative on speaker) OUT
